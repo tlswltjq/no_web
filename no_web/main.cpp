@@ -6,9 +6,24 @@
 //
 
 #include <iostream>
-
+using namespace std;
+#define SQUARE(x) ((x) * (x))
+int sqrt();
+inline int sqrtt(int x){
+    return x * x;
+}
+namespace Parent{
+    int num = 2;
+    namespace child1 {
+    int num = 3;
+    }
+    namespace child2 {
+    int num = 4;
+    }
+}
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    cout<<"ParentNum : "<<Parent::num<<endl;
+    cout<<"Child1Num : "<<Parent::child1::num<<endl;
+    cout<<"Child2Num : "<<Parent::child2::num<<endl;
     return 0;
 }
